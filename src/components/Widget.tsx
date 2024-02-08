@@ -25,6 +25,7 @@ const useStyles = makeStyles({
   headerContent: {
     flex: 1,
     cursor: "grab",
+    zIndex: 100,
   },
   headerAction: {
     display: "flex",
@@ -32,6 +33,7 @@ const useStyles = makeStyles({
     flexDirection: "row",
     visibility: "visible",
     marginTop: '-9px',
+    zIndex: 100,
   },
   content: {
     height: "calc(100% - 30px)",
@@ -53,6 +55,7 @@ const useStyles = makeStyles({
   },
   barContent: {
     marginTop: -30,
+    zIndex: 10,
   },
   mapContent: {
     padding: "0px !important",
