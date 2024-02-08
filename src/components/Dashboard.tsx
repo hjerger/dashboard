@@ -26,6 +26,7 @@ import { getDefaultDashboard } from "./DefaultDashboard"
 import Table from "./Table"
 import PieChart from "./PieChart"
 import TinyBarChart from "./BarChart"
+import ArcGisMap from "./ArcGisMap"
 import { makeStyles } from "@mui/styles"
 
 const useStyles = makeStyles({
@@ -95,8 +96,10 @@ const Dashboard = ({ id, measureBeforeMount }: DashboardProps) => {
       return <Table />
     } else if (type === "Pie") {
       return <PieChart />
-    } else {
+    } else if (type === "Bar"){
       return <TinyBarChart />
+    } else if (type === "Map") {
+      return <ArcGisMap />
     }
   }, [])
 
