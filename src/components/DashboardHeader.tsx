@@ -12,6 +12,7 @@ import ListItemIcon from "@mui/material/ListItemIcon"
 import BarChartIcon from "@mui/icons-material/BarChart"
 import PieChartIcon from "@mui/icons-material/PieChart"
 import TableChartIcon from "@mui/icons-material/TableChart"
+import PlaceIcon from '@mui/icons-material/Place'
 import { makeStyles } from "@mui/styles"
 
 const useStyles = makeStyles({
@@ -48,6 +49,11 @@ const DashboardHeader = ({ addWidget }: DashboardHeaderPros) => {
 
   const handlePieChart = () => {
     addWidget("Pie", "Pie Chart")
+    handleClose()
+  }
+
+  const handleMap = () => {
+    addWidget("Map", "Map")
     handleClose()
   }
 
@@ -101,6 +107,12 @@ const DashboardHeader = ({ addWidget }: DashboardHeaderPros) => {
             <TableChartIcon />
           </ListItemIcon>
           <ListItemText primary={"Table Chart"} />
+        </MenuItem>
+        <MenuItem onClick={handleMap}>
+          <ListItemIcon>
+            <PlaceIcon />
+          </ListItemIcon>
+          <ListItemText primary={"Map"} />
         </MenuItem>
       </Menu>
     </div>

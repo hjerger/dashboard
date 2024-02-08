@@ -6,8 +6,8 @@ import { makeStyles } from "@mui/styles"
 const useStyles = makeStyles({
   resizeHandle: {
     "& .react-grid-item > .react-resizable-handle::after": {
-      borderBottom: `2px solid black`,
-      borderRight: `2px solid black`,
+      borderBottom: `2px solid grey`,
+      borderRight: `2px solid grey`,
     },
   },
   dashboard: {
@@ -54,7 +54,7 @@ const DashboardComponent = ({
       width={width}
       measureBeforeMount={measureBeforeMount}
       onLayoutChange={(layout, layouts) => onLayoutChange(layout, layouts)}
-      margin={[16, 16]}
+      margin={[12, 12]}
       draggableHandle={".draggable-handle"}
     >
       {gridItems}

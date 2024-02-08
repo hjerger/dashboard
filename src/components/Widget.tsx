@@ -20,6 +20,7 @@ const useStyles = makeStyles({
     margin: "1rem, 2rem, 0rem, 2rem",
     display: "flex",
     backgroundColor: "#007CC2",
+    height: '30px',
   },
   headerContent: {
     flex: 1,
@@ -30,11 +31,11 @@ const useStyles = makeStyles({
     alignItems: "flex-start",
     flexDirection: "row",
     visibility: "visible",
+    marginTop: '-9px',
   },
   content: {
-    height: "calc(100% - 68px)",
-    width: "calc(100% - 16px)",
-    paddingTop: "16px !important",
+    height: "calc(100% - 30px)",
+    padding: "8px !important",
   },
   subtitle: {
     display: "inline-block",
@@ -44,16 +45,20 @@ const useStyles = makeStyles({
     padding: 10,
     marginTop: -2,
   },
-  tableTextOverflow: {
+  tableWidget: {
     "& td": {
       textOverflow: "clip !important",
     },
+    width: "calc(100% - 16px)"
   },
   barContent: {
     marginTop: -30,
   },
+  mapContent: {
+    padding: "0px !important",
+  },
   title: {
-    paddingTop: 12,
+    paddingTop: 3,
   },
 })
 
@@ -103,9 +108,11 @@ const Widget = ({ config, children, onRemove }: WidgetProps) => {
         </div>
       </div>
       <CardContent
-        className={`${classes.content} ${
-          config.type === "Table" ? classes.tableTextOverflow : ""
-        } ${config.type === "Bar" ? classes.barContent : ""}`}
+        className={`${classes.content} 
+           ${config.type === "Table" ? classes.tableWidget : ""}
+           ${config.type === "Bar" ? classes.barContent : ""}
+           ${config.type === "Map" ? classes.mapContent : ""}`
+          }
       >
         {children}
       </CardContent>

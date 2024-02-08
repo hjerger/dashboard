@@ -1,18 +1,32 @@
 import { useEffect, useState } from "react"
 import { BarChart } from "@mui/x-charts/BarChart"
 import { ParentSize } from "@visx/responsive"
+import Typography from "@mui/material/Typography"
+import { makeStyles } from "@mui/styles"
+
 import axios from "axios"
+
+const useStyles = makeStyles({
+  noData: {
+    display: 'flex',
+    width: '100%',
+    flexDirection: 'column',
+    paddingTop: '50px',
+  },
+})
 
 const palette = ["#1DACCC"]
 
 const HorizontalBars = () => {
+  const classes = useStyles()
+
   const [data, setData] = useState<any[]>([])
 
   const loadData = (data: any[]) => {
     const newData: any[] = data.map((d) => {
       return { analyst: d.security_analyst, value: d.count }
     })
-    setData(newData)
+    setData(newData || [])
   }
 
   useEffect(() => {
@@ -32,7 +46,11 @@ const HorizontalBars = () => {
       })
   }, [])
 
-  return (
+  return data.length < 1 ? (
+    <div className={classes.noData}>
+    <Typography >{"No Data"}</Typography>
+    </div>
+  ) : (
     <ParentSize>
       {(parent) => (
         <BarChart
@@ -58,4 +76,5 @@ const HorizontalBars = () => {
     </ParentSize>
   )
 }
+
 export default HorizontalBars

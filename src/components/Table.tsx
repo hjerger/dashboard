@@ -72,6 +72,7 @@ const Row = ({ row }: RowPros) => {
         })
         .catch((error) => {
           console.log(error)
+          setRaw([])
         })
     }
   }, [open, row.key])
