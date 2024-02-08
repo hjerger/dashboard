@@ -17,3 +17,5 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 - the dashboard layout is stored in local storage, if you refresh the browser the last dashboard layout will be loaded
 
 ![Screenshot of the dashboard](https://github.com/hjerger/dashboard/blob/main/Screenshot1.png)
+
+![Screenshot of the dashboard](https://github.com/hjerger/dashboard/blob/main/Screenshot2.png)
