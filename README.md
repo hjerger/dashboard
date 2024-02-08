@@ -16,4 +16,4 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 - you can check how the chart position and size adjusts if you reduce the browser width
 - the dashboard layout is stored in local storage, if you refresh the browser the last dashboard layout will be loaded
 
-![Screenshot of the dashboard](https://github.com/hjerger/dashboard/blob/main/Screenshot.png)
+![Screenshot of the dashboard](https://github.com/hjerger/dashboard/blob/main/Screenshot1.png)
