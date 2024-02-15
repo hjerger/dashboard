@@ -31,7 +31,7 @@ import { makeStyles } from "@mui/styles"
 
 const useStyles = makeStyles({
   dashboardPanel: {
-    height: `calc(100vh - 68px)`,
+    height: `calc(100vh - 44px)`,
     overflowY: "scroll",
     overflowX: "hidden",
   },
