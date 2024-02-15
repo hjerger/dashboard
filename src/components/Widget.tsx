@@ -19,7 +19,7 @@ const useStyles = makeStyles({
   header: {
     margin: "1rem, 2rem, 0rem, 2rem",
     display: "flex",
-    backgroundColor: "#007CC2 ",
+    backgroundColor: "#007CC2",
     height: '30px',
   },
   headerContent: {
