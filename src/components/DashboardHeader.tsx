@@ -17,8 +17,12 @@ import { makeStyles } from "@mui/styles"
 
 const useStyles = makeStyles({
   header: {
-    backgroundColor: "#004C7C !important",
+    backgroundColor: '#004C7C !important',
+    height: '40px',
   },
+  toolbar: {
+    minHeight: '40px !important',
+  }
 })
 
 type DashboardHeaderPros = {
@@ -61,7 +65,7 @@ const DashboardHeader = ({ addWidget }: DashboardHeaderPros) => {
     <div>
       <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static" className={classes.header}>
-          <Toolbar variant="dense">
+          <Toolbar variant="dense" className={classes.toolbar}>
             <IconButton
               size="large"
               edge="start"

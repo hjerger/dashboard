@@ -1,17 +1,15 @@
 import { Layouts } from "react-grid-layout"
 import { WidgetConfig } from "./Widget"
 
-const LS_VERSION = "1"
-
 const LS_LAYOUTS = "layouts"
 const LS_ITEMS = "items"
 
 const getLayoutKey = (dashboardId: string): string => {
-  return LS_LAYOUTS + "-" + dashboardId + "-" + LS_VERSION
+  return LS_LAYOUTS + "-" + dashboardId
 }
 
 const getItemsKey = (dashboardId: string): string => {
-  return LS_ITEMS + "-" + dashboardId + "-" + LS_VERSION
+  return LS_ITEMS + "-" + dashboardId
 }
 
 export const getLayoutsFromLocalStorage = (
